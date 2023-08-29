@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-style {
+    @apply font-medium px-3 py-2 rounded-lg text-white bg-red-700 hover:bg-blue-800 hover:text-white;
+}
+.card-design{
+  @apply max-w-sm rounded overflow-hidden shadow-lg
+}
+.card-body{
+  @apply px-6 py-4
+}
+.card-footer{
+  @apply px-6 pt-4 pb-2
+}
+.rating{
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2
+}
