@@ -6,7 +6,7 @@
     @apply font-medium px-3 py-2 rounded-lg text-white bg-red-700 hover:bg-blue-800 hover:text-white;
 }
 .card-design{
-  @apply max-w-sm rounded overflow-hidden shadow-lg
+  @apply max-w-sm rounded overflow-hidden shadow-lg bg-slate-400 dark:bg-slate-800
 }
 .card-body{
   @apply px-6 py-4
@@ -15,5 +15,19 @@
   @apply px-6 pt-4 pb-2
 }
 .rating{
-  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 dark:bg-red-700 dark:text-white
+}
+
+.details-design{
+  @apply grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-10 bg-slate-300 dark:bg-slate-100 p-7
+}
+
+.dark {
+    background-color: rgb(33, 33, 47);
+    color: white;
+}
+
+.bg-light{
+    background: #efefef;
+    color: #eaeaea;
 }

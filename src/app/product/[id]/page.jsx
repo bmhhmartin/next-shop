@@ -12,9 +12,9 @@ const page = async({params}) => {
             <div className='py-5'>
                 <h2 className='font-bold text-green-600 lg:text-4xl md:text-3xl mb-5'>Product Details</h2>
             </div>
-            <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols1 gap-10">
+            <div class="details-design">
                 <div>
-                    <Image src={product.images[0]} height={300} width={500} layout="responsive" placeholder='blur' blurDataURL='https://www.befunky.com/images/prismic/391d50e3-1268-45e1-aaaa-3cfe6f2fb90d_hero-blur-image-2.jpg?auto=avif,webp&format=jpg&width=896' alt={product.title}/>
+                    <Image src={product.images[0]} height={300} width={500} priority alt={product.title}/>
                 </div>
                 <div>
                     <ul>
@@ -27,11 +27,11 @@ const page = async({params}) => {
                     </ul>
                 </div>
             </div>
-            <h2 className='my-10 text-white text-3xl font-bold text-center bg-slate-500 p-3'>All Images</h2>
-            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols1 gap-10 mt-5 mx-auto">
+            <h2 className='my-10 text-white text-3xl font-bold text-center bg-slate-500 p-3'>Other Images</h2>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mt-5 mx-auto">
                 {
                     product.images.map((image, index)=>(
-                            <div className="card w-96 bg-base-100 shadow-xl" key={index}>
+                            <div className="card dark:bg-base-100 shadow-xl bg-slate-50" key={index}>
                                 <figure>
                                     <Image src={image} height={200} width={300} layout='responsive' placeholder='blur' blurDataURL='https://www.befunky.com/images/prismic/391d50e3-1268-45e1-aaaa-3cfe6f2fb90d_hero-blur-image-2.jpg?auto=avif,webp&format=jpg&width=896' alt={product.title}/>
                                 </figure>

@@ -1,18 +1,25 @@
 
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 import getAllCategories from '../libs/getAllCategories';
 
-const Header = async () => {
 
-    const menu = await getAllCategories();
+const Header =  ({themeOption}) => {
+
+    // const menu = await getAllCategories();
+
+
+    
 
 
     return (
-        <div>
+        <div className='relative'>
             <div className="navbar bg-base-300">
                 <div className="flex-1">
                     <Link href='/' className="btn btn-ghost normal-case text-xl">Shop</Link>
+                    <span className='mr-2'>Theme Change:</span>
+              <input type="checkbox" className="toggle" onChange={themeOption}/>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -49,33 +56,35 @@ const Header = async () => {
                     </div>
                     
                     <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                        <div className="w-10 rounded-full">
-                        <img src="https://www.pngarts.com/files/6/User-Avatar-in-Suit-PNG.png" />
-                        </div>
-                    </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li>
-                        <a className="justify-between">
-                            Profile
-                            <span className="badge">New</span>
-                        </a>
-                        </li>
-                        <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
-                    </ul>
+                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                            <div className="w-10 rounded-full">
+                            {/* <Image src="https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-PNG-Picture.png" height={300} width={500} layout="fixed" alt="person"/> */}
+                            </div>
+                        </label>
+                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li>
+                            <a className="justify-between">
+                                Profile
+                                <span className="badge">New</span>
+                            </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
                     </div>
+                    
                 </div>
             </div>
+            
 
-            <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
+            {/* <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
                 {
                     menu.map((menus, index)=>(
                         <li key={index} className='capitalize'><Link href="/">{menus}</Link></li>
                     ))
                 }
                 
-            </ul>
+            </ul> */}
         </div>
     );
 };

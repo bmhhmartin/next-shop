@@ -16,7 +16,7 @@ const page =  async() => {
                         data.products.map((product, index)=>(
                             <Link className='grid' href={`product/${product.id}`} key={index}>
                             <div className="card-design">
-                                <Image src={product.thumbnail} height={300} width={500} layout="responsive" placeholder='blur' blurDataURL='https://www.befunky.com/images/prismic/391d50e3-1268-45e1-aaaa-3cfe6f2fb90d_hero-blur-image-2.jpg?auto=avif,webp&format=jpg&width=896' alt={product.title}/>
+                                <Image src={product.thumbnail} height={300} width={500} alt={product.title}/>
                                 <div className="card-body">
                                 <div className="font-bold text-xl mb-2">{product.title}</div>
                                 <p className="text-red-700 font-semibold text-base">{product.price}$</p>
